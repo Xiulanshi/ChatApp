@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h13-w6-SPX">
+                                <rect key="frame" x="20" y="40" width="560" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCell" id="4ye-Iz-Qaa">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4ye-Iz-Qaa" id="bXd-1D-K2c">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7F-0k-ab9" userLabel="DockView">
+                                <rect key="frame" x="20" y="540" width="560" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0BX-52-Ie0">
+                                        <rect key="frame" x="20" y="15" width="435" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euj-st-Oh3">
+                                        <rect key="frame" x="470" y="15" width="70" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="In5-qB-7gQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v6Z-4Z-Pkf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0BX-52-Ie0" firstAttribute="top" secondItem="u7F-0k-ab9" secondAttribute="top" constant="15" id="CZK-7o-lMP"/>
+                                    <constraint firstAttribute="trailing" secondItem="euj-st-Oh3" secondAttribute="trailing" constant="20" id="Frq-xG-4On"/>
+                                    <constraint firstItem="euj-st-Oh3" firstAttribute="leading" secondItem="0BX-52-Ie0" secondAttribute="trailing" constant="15" id="aBV-3v-jpq"/>
+                                    <constraint firstItem="euj-st-Oh3" firstAttribute="top" secondItem="u7F-0k-ab9" secondAttribute="top" constant="15" id="cUb-y0-snt"/>
+                                    <constraint firstItem="0BX-52-Ie0" firstAttribute="leading" secondItem="u7F-0k-ab9" secondAttribute="leading" constant="20" id="k5s-7F-nJk"/>
+                                    <constraint firstAttribute="height" constant="60" id="mNQ-Qo-KSS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="h13-w6-SPX" secondAttribute="trailing" id="86I-a7-YzW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u7F-0k-ab9" secondAttribute="bottom" id="AnN-H1-yeN"/>
+                            <constraint firstItem="u7F-0k-ab9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="EEq-tb-BJQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u7F-0k-ab9" secondAttribute="trailing" id="FZc-TJ-Qz2"/>
+                            <constraint firstItem="h13-w6-SPX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FnK-GL-A8j"/>
+                            <constraint firstItem="h13-w6-SPX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="qnd-F6-rdN"/>
+                            <constraint firstItem="u7F-0k-ab9" firstAttribute="top" secondItem="h13-w6-SPX" secondAttribute="bottom" id="t8p-Nl-mWm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dockViewHeightConstraint" destination="mNQ-Qo-KSS" id="evP-Ya-CG7"/>
+                        <outlet property="messageTableView" destination="h13-w6-SPX" id="bbs-QX-PID"/>
+                        <outlet property="messageTextField" destination="0BX-52-Ie0" id="8iC-Xt-j8Y"/>
+                        <outlet property="sendButton" destination="euj-st-Oh3" id="cd2-QA-teq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228" y="294"/>
+        </scene>
+    </scenes>
+</document>
